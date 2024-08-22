@@ -16,27 +16,21 @@ To install the package, run the following command in your terminal:
 The package provides a PostRedirector class that offers a similar API to the standard Laravel redirect helper. However, it allows you to specify additional data to be submitted in a POST request before the redirection:
 
 ```php
-use OoBook\PostRedirector\PostRedirector;
-
     Route::get('/old-url', function () {
-    $data = [
-        'name' => 'John Doe',
-        'email' => 'john.doe@example.com',
-    ];
+        $data = [
+            'name' => 'John Doe',
+            'email' => 'john.doe@example.com',
+        ];
 
-    return (new PostRedirector)
-        ->to('/new-url')
-        ->withData($data)
-        ->go();
+        return redirector()
+            ->toWithPayload('/new-post-url', $data)
     });
 ```
 
 In this example, the route redirects the user to /new-url and submits the provided $data array via a POST request before the redirection.
 
 ### Available Methods
-- **to(string $url)** : Sets the URL to redirect to.
-- **withData(array $data)** : Sets the data to be submitted in the POST request.
-- **go()** : Performs the redirection with the specified data.
+- **toWithPayload(string $url, array|object $data)** : Sets url and the data to be submitted in the POST request
 
 ## Benefits
 
