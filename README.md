@@ -22,7 +22,7 @@ The package provides a PostRedirector class that offers a similar API to the sta
             'email' => 'john.doe@example.com',
         ];
 
-        return redirector()
+        return redirect()
             ->toWithPayload('/new-post-url', $data)
     });
 ```
