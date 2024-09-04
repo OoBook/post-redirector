@@ -1,6 +1,6 @@
 <?php
 
-namespace OoBook\PostRedirector;
+namespace Oobook\PostRedirector;
 
 class PostRedirectResponse extends \Symfony\Component\HttpFoundation\Response
 {

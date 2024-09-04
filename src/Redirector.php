@@ -1,6 +1,6 @@
 <?php
 
-namespace OoBook\PostRedirector;
+namespace Oobook\PostRedirector;
 
 class Redirector extends \Illuminate\Routing\Redirector
 {
@@ -12,7 +12,7 @@ class Redirector extends \Illuminate\Routing\Redirector
      * @param int $status
      * @param array $headers
      * @param bool|null $secure
-     * @return \OoBook\PostRedirector\PostRedirectResponse
+     * @return \Oobook\PostRedirector\PostRedirectResponse
      */
     public function toWithPayload($path, $data, $status = 307, $headers = [], $secure = null)
     {

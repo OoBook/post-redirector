@@ -1,6 +1,6 @@
 <?php
 
-namespace OoBook\PostRedirector;
+namespace Oobook\PostRedirector;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -15,7 +15,7 @@ class LaravelServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->extend('redirect', function ($service, $app) {
-            $redirector = new \OoBook\PostRedirector\Redirector($app['url']);
+            $redirector = new \Oobook\PostRedirector\Redirector($app['url']);
 
             // If the session is set on the application instance, we'll inject it into
             // the redirector instance. This allows the redirect responses to allow
