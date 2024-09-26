@@ -1,4 +1,11 @@
 # POST REDIRECTOR
+
+<p align="center">
+    <a href="https://packagist.org/packages/oobook/post-redirector"><img src="https://img.shields.io/packagist/dt/oobook/post-redirector" alt="Total Downloads"></a>
+    <a href="https://packagist.org/packages/oobook/post-redirector"><img src="https://img.shields.io/packagist/v/oobook/post-redirector" alt="Latest Stable Version"></a>
+    <a href="https://packagist.org/packages/oobook/post-redirector"><img src="https://img.shields.io/packagist/l/oobook/post-redirector" alt="License"></a> 
+</p>
+
 This package provides a convenient way to perform POST redirects within your Laravel application.  Unlike the standard redirector()->to() method, PostRedirector allows you to include additional data that gets submitted via a POST request before the redirection occurs.
 
 ## Installation

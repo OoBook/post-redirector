@@ -1,0 +1,1 @@
+{"version":1,"defects":{"Oobook\\PostRedirector\\Tests\\RoutingRedirectorTest::testPostRedirectToWithPayload":4,"Oobook\\PostRedirector\\Tests\\RoutingRedirectorTest::testBasicRedirectTo":4},"times":{"Oobook\\PostRedirector\\Tests\\RoutingRedirectorTest::testBasicRedirectTo":0.056,"Oobook\\PostRedirector\\Tests\\RoutingRedirectorTest::testPostRedirectToWithPayload":0.005}}

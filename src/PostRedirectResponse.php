@@ -55,7 +55,7 @@ class PostRedirectResponse extends \Symfony\Component\HttpFoundation\Response
         $this->data = $data;
 
         // Set the HTML content for POST requests
-        $this->setContent($this->getPostRedirectHtml($url, $data));
+        $this->setContent($this->getPostRedirectHtml($url));
 
         return $this;
     }
@@ -81,6 +81,11 @@ class PostRedirectResponse extends \Symfony\Component\HttpFoundation\Response
         return $formFields;
     }
 
+    public function getPayloadData()
+    {
+        return $this->data;
+    }
+
     /**
      * Get the HTML content for a POST redirect.
      *
@@ -88,9 +93,9 @@ class PostRedirectResponse extends \Symfony\Component\HttpFoundation\Response
      * @param object|array $data
      * @return string
      */
-    protected function getPostRedirectHtml(string $url, $data): string
+    protected function getPostRedirectHtml(string $url): string
     {
-        $formFields = $this->buildFormFields($data);
+        $formFields = $this->buildFormFields($this->getPayloadData());
         return <<<HTML
 <!DOCTYPE html>
 <html>
