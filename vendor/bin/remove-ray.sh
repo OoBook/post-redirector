@@ -1,1 +1,0 @@
-../spatie/ray/bin/remove-ray.sh
